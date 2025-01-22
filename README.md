@@ -45,6 +45,12 @@ windows across all desktops, and the restore process will restore all windows on
   windows). If a specific folder/path is already open in Windows Explorer, it will simply be opened
   again in another Explorer window.
 
+### Scheduling/Auto-Backups
+
+Currently, backups and restores can only be triggered manually. There is no support for automatic
+backups or restores.  
+Scheduling these can be set up manually via the Windows Task Scheduler.
+
 ## Performance Considerations
 
 - Each individual Explorer window is opened as an entirely separate `explorer.exe` process. This was
