@@ -4,7 +4,7 @@ param (
     [Parameter(Mandatory=$true)][string]$backupsPath
 )
 
-if ((Test-Path $backupsPath -PathType Container) -eq $false) {
+if ((Test-Path -LiteralPath $backupsPath -PathType Container) -eq $false) {
         # Ugly workaround because "Write-Error" formats really weirdly. :/
         [Console]::ForegroundColor = 'red'
         [Console]::Error.WriteLine("The path for the backup files provided, `"$backupsPath`", does not exist, or is not a path to a folder. Quitting.")
