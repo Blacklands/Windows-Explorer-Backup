@@ -105,6 +105,9 @@ foreach ($folder in $folders) {
     # I have not been able to find a way to "refresh" the minimized windows without bringing them to the foreground, so I don't think
     # a "best of both worlds" solution exists - at least not without me diving deeper into the Windows API and seeing if there is some
     # low-level way to do this.
+    # EDIT: I have tried to do this with the Windows API now. Unfortunately, absolutely nothing works. Sending all kinds of lower-level
+    # refresh commands, some of which seem to be succeeding (return code 0), but the previews are not actually updated. Maybe this is just
+    # impossible right now without bringing the windows to the foreground, however briefly.
     # 
     # Also, we need to "generically" get all processes with the name "explorer" here, which is also not ideal. For some reason, the
     # process that "Start-Process" returns has the wrong ID (one that does not exist) and does not actually point to the Explorer
